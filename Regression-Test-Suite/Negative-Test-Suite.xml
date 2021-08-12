@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="ee0519b2-448d-4e30-ba8e-cf62b2ea9d50" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Negative Test Suite" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ee0519b2-448d-4e30-ba8e-cf62b2ea9d50fileName">Negative-Test-Suite</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Test Post Request" id="73e5bb28-9a2c-4aab-a462-7256cd232f19">
+    <con:settings/>
+    <con:config service="CreateAccount" methodName="Method 1" resourcePath="/api/v1/user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Test Post Request" id="10246c32-6900-4b6d-ab41-b5f62e24ff96" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:request/>
+        <con:originalUri>https://www.test-insurance.com/api/v1/user</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ad14472c-2f41-4ef7-9f57-dd74c2ed0e1d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="df2a9a97-344f-4b36-a3db-0cff6c2ea8eb" name="Response SLA">
+          <con:configuration>
+            <SLA>5000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Test Get REquest" id="b7f82c0e-aa0f-46b2-a6ad-e243c1164bec">
+    <con:settings/>
+    <con:config service="CreateAccount" methodName="Method 1" resourcePath="/api/v1/user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Test Get REquest" id="5293e808-2f46-4968-bec8-17b40b46c331" mediaType="application/json" postQueryString="false">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="d8cdcebd-5b8c-46b3-b1bc-eeba3405b703" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d9068c63-9ee3-4849-8a3c-7498703b0f70" name="Response SLA">
+          <con:configuration>
+            <SLA>5000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
